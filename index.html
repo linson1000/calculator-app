@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="theme-toggle">
+            <button id="theme-btn">🌞/🌙</button>
+        </div>
+        <div class="display">
+            <input type="text" id="result" disabled>
+        </div>
+        <div class="buttons">
+            <button class="sign" id="clear">C</button>
+            <button class="sign" id="backspace">←</button>
+            <button class="sign">/</button>
+            <button class="sign">*</button>
+
+            <button class="num">7</button>
+            <button class="num">8</button>
+            <button class="num">9</button>
+            <button class="sign">-</button>
+
+            <button class="num">4</button>
+            <button class="num">5</button>
+            <button class="num">6</button>
+            <button class="sign">+</button>
+
+            <button class="num">1</button>
+            <button class="num">2</button>
+            <button class="num">3</button>
+            <button class="sign" id="equal">=</button>
+
+            <button class="num zero">0</button>
+            <button class="num">.</button>
+        </div>
+        <div class="history">
+            <button id="history-btn">History</button>
+            <ul id="history-list"></ul>
+        </div>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.10.0/firebase-database.js"></script>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyBsfzF96AqJpDBhTcO5yoqQxH9uLb86rUY",
+          authDomain: "calculator-93d54.firebaseapp.com",
+          projectId: "calculator-93d54",
+          storageBucket: "calculator-93d54.appspot.com",
+          messagingSenderId: "323310876489",
+          appId: "1:323310876489:web:1a2139da1c016d33988c98",
+          measurementId: "G-7J39DFMWG9"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+    <script src="script.js"></script>
+</body>
+</html>
